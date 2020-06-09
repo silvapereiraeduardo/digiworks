@@ -1,0 +1,29 @@
+{
+  "name": "Toggl-to-Jira-Chrome-Extension",
+  "version": "1.0.0",
+  "description": "Sync toggl time entries with Jira work log",
+  "main": "index.js",
+  "scripts": {
+    "build": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eduardosilvapereira/Toggl-to-Jira-Chrome-Extension.git"
+  },
+  "keywords": [],
+  "author": "Eduardo Pereira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eduardosilvapereira/Toggl-to-Jira-Chrome-Extension/issues"
+  },
+  "homepage": "https://github.com/eduardosilvapereira/Toggl-to-Jira-Chrome-Extension#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-strip-comments": "^2.5.2",
+    "gulp-uglify": "^3.0.2",
+    "gulp-zip": "^5.0.1"
+  },
+  "dependencies": {}
+}

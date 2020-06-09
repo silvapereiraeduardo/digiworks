@@ -1,0 +1,32 @@
+{
+    "name": "DigiWorks",
+    "description": "Registra as entradas de tempo do Toggl.com via * registros de trabalho * para as Demandas correspondentes no Jira",
+    "version": "1.0.0",
+    "permissions": [
+        "storage",
+        "tabs",
+        "webRequest",
+        "webRequestBlocking",
+        "<all_urls>",
+        "https://toggl.com/*/*", "https://atlassian.net/*/*"
+    ],
+    "icons": {
+        "16": "digiworks_16.png",
+        "32": "digiworks_32.png",
+        "48": "digiworks_48.png",
+        "128": "digiworks_128.png"
+    },
+    "background": {
+        "page": "background.html"
+    },
+    "browser_action": {
+        "default_title": "DigiWorks",
+        "default_popup": "popup.html"
+    },
+    "options_page": "options.html",
+    "content_scripts": [{
+        "matches": ["http://*/*", "https://*/*"],
+        "js": ["jquery.min.js"]
+    }],
+    "manifest_version": 2
+}

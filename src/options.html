@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2016 Frank Trigub. All rights reserved.*
+    frankyyyy at live com
+    Digifred adaptation by Eduardo Pereira
+-->
+<html>
+  <head>
+      <!-- HTML 4 -->
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <!-- HTML5 -->
+      <meta charset="utf-8"/>
+      <title>DigiWorks</title>
+      <link href="style.css" rel="stylesheet" type="text/css"/>
+  </head>
+  <body>
+    <div id="loadingDiv" style="display: none;">
+        <div id="loadingBar" style="display: none;">
+            <div>
+                <img src="assets/images/digifred_avatar.png" height="32" class="loadingDiv-logo"/>
+            </div>
+            <div>
+                <img src="assets/images/ajax-loader.gif">
+            </div>
+        </div>
+    </div>
+    <div id="main-content-options">
+        <!-- Header -->
+        <div id="main-header">
+            <div id="main-header-logo"><img src="assets/images/digifred_avatar.png" height="32"/></div>
+            <div id="main-header-text"><h2>DigiWorks (Configurações)</h2></div>
+        </div>
+        <div class="line">
+            <div id="status"></div>
+        </div>
+        <div class="line"><h1 class="header">Extensão</h1></div>
+        <div class="options-panel">
+            <div class="fields-wrapper">
+                <div class="field field-full">
+                    <label class="options">
+                        "Comentário padrão do trabalho" do qual será adicionado à descrição usando "-" como separador.
+                    </label>
+                    <input id="log-comment" style="width: 100%;"/>
+                </div>
+            </div>
+            <div class="fields-wrapper">
+                <div class="field field-full">
+                    <label class="options">
+                        Texto a ser removido de todos os comentários (caso você use algum código que não precisará nos comentários)
+                    </label>
+                    <input id="log-comment-replace" style="width: 100%;"/>
+                </div>
+            </div>
+            <div class="fields-wrapper">
+                <div class="field-options">
+                    <label>
+                      <input type="checkbox" id="jump-to-today"/>
+                      <b>&nbsp;Sempre pule a data de término para hoje em vez de lembrar a última data</b>
+                    </label>
+                </div>
+            </div>
+            <div class="fields-wrapper">
+                <div class="field-options">
+                    <label>
+                      <input type="checkbox" id="show-day-total"/>
+                      <b>&nbsp;Somar o total de horas em cada dia</b>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="line header"><h1 class="header">Toggl</h1></div>
+        <div class="options-panel">
+            <div class="fields-wrapper">
+                <div class="field field-full">
+                    <label class="options">API Token</label>
+                    <input id="toggl-api-key" style="width: 100%;"/>
+                </div>
+            </div>
+        </div>
+        <div class="line header"><h1 class="header">Jira</h1></div>
+        <div class="options-panel">
+            <div class="fields-wrapper">
+                <div class="field field-full">
+                    <label class="options">E-mail do usuário</label>
+                    <input id="jira-user-email" style="width: 100%;"/>
+                </div>
+            </div>
+        </div>
+        <div class="line">
+            <button id="save">Salvar alterações</button>
+        </div>
+        <div class="line version">
+          <span>V: 1.0.0 <i>(08/06/2020)</i><span>
+        </div>
+    </div>
+    <div class="hide">
+        <label class="hide"><input type="checkbox" id="merge-entries"/>Mesclar entradas de horário Toggl por ticket.</label>
+        <div class="field">
+            <label>URL do servidor Jira <i>( e.g. <b>https://digifred.atlassian.net</b> sem arrastar / barra )</i></label>
+            <input id="jira-url" style="width: 100%;"/>
+        </div>
+    </div>
+    <script src="options.js"></script>
+  </body>
+</html>

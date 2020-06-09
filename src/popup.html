@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2016 Frank Trigub. All rights reserved.*
+    frankyyyy at live com
+    Digifred adaptation by Eduardo Pereira
+-->
+<html>
+  <head>
+      <!-- HTML 4 -->
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <!-- HTML5 -->
+      <meta charset="utf-8"/>
+      <title>DigiWorks</title>
+      <script type="text/javascript" src="jquery.min.js">
+      </script>
+      <script type="text/javascript" src="lodash.core.js">
+      </script>
+      <script type="text/javascript" src="parser.js">
+      </script>
+      <link href="style.css" rel="stylesheet" type="text/css"/>
+  </head>
+  <body>
+    <div id="loadingDiv">
+        <div id="loadingBar">
+            <div>
+                <img src="assets/images/digifred_avatar.png" height="32" class="loadingDiv-logo"/>
+            </div>
+            <div>
+                <img src="assets/images/ajax-loader.gif">
+            </div>
+        </div>
+    </div>
+    <div id="main-content">
+        <!-- Header -->
+        <div id="main-header">
+            <div id="main-header-logo">
+              <img src="assets/images/digifred_avatar.png" height="32"/>
+            </div>
+            <div id="main-header-text"><h2>DigiWorks</h2></div>
+            <ul id="main-header-options">
+                <li>
+                    <a href="options.html" target="_blank" id="main-header-options-link">
+                        Configurações
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- Feedback -->
+        <div class="feedback-wrapper">
+            <p id="error"></p>
+        </div>
+        <!-- Content -->
+        <div class="fields-wrapper">
+            <div class="field">
+                <label for="start-date">Data Inicial</label>
+                <input type="date" name="start-date" id="start-picker"/>
+            </div>
+            <div class="field">
+                <label for="end-date">Data Final</label>
+                <input type="date" name="end-date" id="end-picker"/>
+            </div>
+        </div>
+        <div class="action-button-wrapper">
+            <button id="submit" class="submit-button">
+                Clique aqui para adicionar seus registros do Toggl no Jira
+            </button>
+        </div>
+        <div class="table-toggl-wrapper">
+            <table>
+                <thead>
+                  <tr>
+                      <th>
+                        <a href="#" id="select-all-link" title="Selecionar todas as demandas" onClick="return selectAll();">#</a>
+                      </th>
+                      <th>Demanda</th>
+                      <th class="text-left">Comentário</th>
+                      <th>Data</th>
+                      <th>Hr. Inicial</th>
+                      <th>Hr. Final</th>
+                      <th>Duração</th>
+                      <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody id="toggle-entries"></tbody>
+            </table>
+        </div>
+    </div>
+  </body>
+</html>
